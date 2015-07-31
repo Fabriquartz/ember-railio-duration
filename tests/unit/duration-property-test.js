@@ -13,7 +13,7 @@ const DurationModel = Ember.Object.extend({
   duration: durationProperty('start', 'end')
 });
 
-qUnit.module('Unit: Computed Duration Property');
+qUnit.module('Unit | Computed Duration Property');
 
 test('Duration is computed', function(assert) {
   const object = DurationModel.create({
