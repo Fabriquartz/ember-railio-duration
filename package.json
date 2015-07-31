@@ -1,6 +1,6 @@
 {
   "name": "ember-railio-duration",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "The default blueprint for ember-cli addons.",
   "directories": {
     "doc": "doc",
@@ -34,7 +34,7 @@
     "ember-disable-prototype-extensions": "^1.0.0",
     "ember-disable-proxy-controllers": "^1.0.0",
     "ember-export-application-global": "^1.0.2",
-    "ember-railio-convert-unit": "0.0.4",
+    "ember-railio-convert-unit": "0.0.6",
     "ember-try": "0.0.6"
   },
   "keywords": [
