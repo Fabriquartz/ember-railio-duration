@@ -1,12 +1,13 @@
-import Ember from 'ember';
-import qUnit  from 'qunit';
-import { test } from 'ember-qunit';
+import Ember       from 'ember';
+import EmberObject from 'ember-object';
+import qUnit       from 'qunit';
+import { test }    from 'ember-qunit';
 
 import durationProperty from 'ember-railio-duration';
 
 const { isEqual } = Ember;
 
-const DurationModel = Ember.Object.extend({
+const DurationModel = EmberObject.extend({
   start: null,
   end:   null,
 
@@ -16,7 +17,7 @@ const DurationModel = Ember.Object.extend({
 qUnit.module('Unit | Computed Duration Property');
 
 test('Duration is computed', function(assert) {
-  const object = DurationModel.create({
+  let object = DurationModel.create({
     start: new Date(2000, 1, 1),
     end:   new Date(2000, 1, 1, 12, 15)
   });
@@ -25,7 +26,7 @@ test('Duration is computed', function(assert) {
 });
 
 test('Setting duration computes end time', function(assert) {
-  const object = DurationModel.create({
+  let object = DurationModel.create({
     start: new Date(2000, 1, 1),
     end:   new Date(2000, 1, 1, 12)
   });
