@@ -1,6 +1,6 @@
-/* eslint-env node */
+/* global module, require */
 'use strict';
 
 module.exports = {
-  name: 'ember-railio-duration'
+  name: require('./package').name
 };
