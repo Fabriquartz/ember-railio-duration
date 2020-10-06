@@ -1,7 +1,5 @@
-import Ember from 'ember';
+import { computed } from '@ember/object';
 import convertUnit from 'ember-railio-convert-unit';
-
-const { computed } = Ember;
 
 function add(a, b)        { return a.valueOf() + b.valueOf(); }
 function difference(a, b) { return b.valueOf() - a.valueOf(); }
@@ -15,6 +13,8 @@ export default function(startPropName, endPropName) {
       if (start instanceof Date && end instanceof Date) {
         return convertUnit(difference(start, end), 'milliseconds', 'hours');
       }
+
+      return null;
     },
 
     set(key, value) {
@@ -28,6 +28,7 @@ export default function(startPropName, endPropName) {
 
         return convertUnit(difference(start, end), 'milliseconds', 'hours');
       }
+      return null;
     }
   });
 }

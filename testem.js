@@ -10,7 +10,7 @@ module.exports = {
     'Chrome'
   ],
   browser_start_timeout: 120,
-  browser_args: {
+  browser_args:          {
     Chrome: {
       ci: [
         // --no-sandbox is needed when running Chrome inside a container
