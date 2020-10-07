@@ -8,6 +8,12 @@ This README outlines the details of collaborating on this Ember addon.
 * `npm install`
 * `bower install`
 
+## Requirements
+
+* Ember.js v3.16 or above
+* Ember CLI v2.13 or above
+* Node.js v10 or above
+
 ## Running
 
 * `ember server`

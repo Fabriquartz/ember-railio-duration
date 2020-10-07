@@ -1,37 +1,41 @@
+'use strict';
+
 module.exports = {
-  root: true,
-  parser: 'babel-eslint',
+  root:          true,
+  parser:        'babel-eslint',
   parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
+    ecmaVersion:  2018,
+    sourceType:   'module',
     ecmaFeatures: {
       legacyDecorators: true
     }
   },
+  plugins: ['ember'],
   extends: [
     'eslint:recommended',
-    'plugin:ember-suave/recommended'
+    'plugin:ember/recommended'
   ],
   env: {
     browser: true,
-    es6: true
+    es6:     true
   },
   rules: {
-    "array-bracket-spacing": "off",
-    "object-curly-spacing":  ["error", "always"],
+    'array-bracket-spacing': 'off',
+    'object-curly-spacing':  ['error', 'always'],
 
-    "no-console":  ["error", { allow: ["error"] }],
-    "quotes":      ["error", "single", { allowTemplateLiterals: true }],
-    "brace-style": ["error", "1tbs", { allowSingleLine: true }],
-    "indent":      ["error", 2, { FunctionExpression: { body: 1 },
-                                  CallExpression:     { arguments: "off" } }],
-    "key-spacing": ["error", { multiLine: { beforeColon: false },
-                               align:     { beforeColon: false, on: "value" } }],
-    "max-len":     ["error", { code: 85 }],
+    'no-console':  ['error', { allow: ['error'] }],
+    'quotes':      ['error', 'single', { allowTemplateLiterals: true }],
+    'brace-style': ['error', '1tbs', { allowSingleLine: true }],
+    'indent':      ['error', 2, { FunctionExpression: { body: 1 },
+      CallExpression:     { arguments: 'off' } }],
+    'key-spacing': ['error', { multiLine: { beforeColon: false },
+      align:     { beforeColon: false, on: 'value' } }],
+    'max-len': ['error', { code: 85 }],
 
-    "max-statements-per-line": "off",
-    "new-cap":                 "off",
-    "operator-linebreak":      "off"
+    'max-statements-per-line': 'off',
+    'new-cap':                 'off',
+    'operator-linebreak':      'off',
+    'ember/no-jquery':         'error'
   },
   overrides: [
     // node files
@@ -53,17 +57,14 @@ module.exports = {
         'tests/dummy/app/**'
       ],
       parserOptions: {
-        sourceType: 'script',
-        ecmaVersion: 2015
+        sourceType: 'script'
       },
       env: {
         browser: false,
-        node: true
+        node:    true
       },
       plugins: ['node'],
-      rules: Object.assign({}, require('eslint-plugin-node').configs.recommended.rules, {
-        // add your custom rules and overrides for node files here
-      })
+      extends: ['plugin:node/recommended']
     }
   ]
 };
