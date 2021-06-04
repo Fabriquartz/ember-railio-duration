@@ -39,7 +39,7 @@
     "ember-load-initializers": "^2.1.1",
     "ember-railio-convert-unit": "0.0.22",
     "ember-resolver": "~8.0.2",
-    "ember-source": "~3.21.1",
+    "ember-source": "~3.27.3",
     "ember-source-channel-url": "^3.0.0",
     "ember-template-lint": "^2.11.0",
     "ember-try": "^1.4.0",
